@@ -1,11 +1,10 @@
-import { useState } from 'react'
-import * as banks from './components/proposal'
+import { Routes, Route } from 'react-router-dom'
+import { UserPanel } from './pages/UserPanel'
 
-
-const App = () => {
-
- return banks.listBanks()
-
+export default function App() {
+    return (
+        <Routes>
+            <Route path={'/'} element={<UserPanel />} />
+        </Routes>
+    )
 }
-
-export default App
